@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:markdown2html/api/md.dart';
+import 'package:markdown2html/frb_generated.dart';
 import 'dart:async';
 
 import 'package:markdown2html/markdown2html.dart' as markdown2html;
+import 'package:markdown2html/markdown2html.dart';
+
+final _testmk1 = """
+## hello world
+""";
 
 void main() {
+  markdownInit();
   runApp(const MyApp());
 }
 
@@ -15,60 +23,41 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  late int sumResult;
-  late Future<int> sumAsyncResult;
+  final controller = TextEditingController(text: _testmk1);
 
-  @override
-  void initState() {
-    super.initState();
-    sumResult = markdown2html.sum(1, 2);
-    sumAsyncResult = markdown2html.sumAsync(3, 4);
-  }
-
+  String html = "";
   @override
   Widget build(BuildContext context) {
-    const textStyle = TextStyle(fontSize: 25);
-    const spacerSmall = SizedBox(height: 10);
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Native Packages'),
-        ),
-        body: SingleChildScrollView(
-          child: Container(
-            padding: const EdgeInsets.all(10),
+          appBar: AppBar(
+            title: const Text('Native Packages'),
+          ),
+          body: SingleChildScrollView(
+            padding: const EdgeInsets.all(12),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const Text(
-                  'This calls a native function through FFI that is shipped as source in the package. '
-                  'The native code is built as part of the Flutter Runner build.',
-                  style: textStyle,
-                  textAlign: TextAlign.center,
+                TextField(
+                  controller: controller,
+                  maxLines: 10,
+                  minLines: 5,
+                  decoration: const InputDecoration(
+                      helperText: "input you markdown text "),
                 ),
-                spacerSmall,
-                Text(
-                  'sum(1, 2) = $sumResult',
-                  style: textStyle,
-                  textAlign: TextAlign.center,
-                ),
-                spacerSmall,
-                FutureBuilder<int>(
-                  future: sumAsyncResult,
-                  builder: (BuildContext context, AsyncSnapshot<int> value) {
-                    final displayValue =
-                        (value.hasData) ? value.data : 'loading';
-                    return Text(
-                      'await sumAsync(3, 4) = $displayValue',
-                      style: textStyle,
-                      textAlign: TextAlign.center,
-                    );
-                  },
-                ),
+                FilledButton(
+                    onPressed: () async {
+                      html = await markdow2Html(str: controller.text);
+                      setState(() {});
+                      debugPrint("$html");
+                      markdown2HtmlWithOptions(str: controller.text);
+                    },
+                    child: const Text("markdown to html")),
+                const Text('output html :'),
+                Text(html)
               ],
             ),
-          ),
-        ),
-      ),
+          )),
     );
   }
 }
