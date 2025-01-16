@@ -106,8 +106,7 @@ fn wire__crate__api__md__markdow2html_sync_impl(
             let api_str = <String>::sse_decode(&mut deserializer);
             deserializer.end();
             transform_result_sse::<_, ()>((move || {
-                let output_ok =
-                    Result::<_, ()>::Ok(crate::api::md::markdow2html_sync(api_str).await)?;
+                let output_ok = Result::<_, ()>::Ok(crate::api::md::markdow2html_sync(api_str))?;
                 Ok(output_ok)
             })())
         },

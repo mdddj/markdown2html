@@ -8,7 +8,7 @@ pub async fn markdow2html(str: String) -> String {
 }
 // markdown to html 同步
 #[frb(sync)]
-pub async fn markdow2html_sync(str: String) -> String {
+pub fn markdow2html_sync(str: String) -> String {
     let html = markdown::to_html(&str);
     html
 }
