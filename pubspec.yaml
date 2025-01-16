@@ -1,6 +1,6 @@
 name: markdown2html
 description: "markdown to html dart lib"
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/mdddj/markdown2html
 
 environment:
@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   plugin_platform_interface: ^2.0.2
-  flutter_rust_bridge: ^2.0.0
+  flutter_rust_bridge: ^2.7.0
   freezed_annotation: ^2.4.1
   json_annotation: ^4.9.0
   meta: any

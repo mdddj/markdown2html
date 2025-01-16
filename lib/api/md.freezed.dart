@@ -27,7 +27,9 @@ mixin _$MkCompileOptions {
   bool get gfmTagfilter => throw _privateConstructorUsedError;
   MkLineEnding? get defaultLineEnding => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MkCompileOptions
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MkCompileOptionsCopyWith<MkCompileOptions> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -61,6 +63,8 @@ class _$MkCompileOptionsCopyWithImpl<$Res, $Val extends MkCompileOptions>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MkCompileOptions
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -149,6 +153,8 @@ class __$$MkCompileOptionsImplCopyWithImpl<$Res>
       $Res Function(_$MkCompileOptionsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MkCompileOptions
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -295,7 +301,9 @@ class _$MkCompileOptionsImpl implements _MkCompileOptions {
       gfmTagfilter,
       defaultLineEnding);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MkCompileOptions
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MkCompileOptionsImplCopyWith<_$MkCompileOptionsImpl> get copyWith =>
@@ -336,8 +344,11 @@ abstract class _MkCompileOptions implements MkCompileOptions {
   bool get gfmTagfilter;
   @override
   MkLineEnding? get defaultLineEnding;
+
+  /// Create a copy of MkCompileOptions
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MkCompileOptionsImplCopyWith<_$MkCompileOptionsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -379,7 +390,9 @@ mixin _$MkConstructs {
   bool get mdxJsxText => throw _privateConstructorUsedError;
   bool get thematicBreak => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MkConstructs
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MkConstructsCopyWith<MkConstructs> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -437,6 +450,8 @@ class _$MkConstructsCopyWithImpl<$Res, $Val extends MkConstructs>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MkConstructs
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -669,6 +684,8 @@ class __$$MkConstructsImplCopyWithImpl<$Res>
       _$MkConstructsImpl _value, $Res Function(_$MkConstructsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MkConstructs
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1074,7 +1091,9 @@ class _$MkConstructsImpl implements _MkConstructs {
         thematicBreak
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MkConstructs
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MkConstructsImplCopyWith<_$MkConstructsImpl> get copyWith =>
@@ -1186,8 +1205,11 @@ abstract class _MkConstructs implements MkConstructs {
   bool get mdxJsxText;
   @override
   bool get thematicBreak;
+
+  /// Create a copy of MkConstructs
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MkConstructsImplCopyWith<_$MkConstructsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1198,7 +1220,9 @@ mixin _$MkParseOptions {
   bool get gfmStrikethroughSingleTilde => throw _privateConstructorUsedError;
   bool get mathTextSingleDollar => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MkParseOptions
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MkParseOptionsCopyWith<MkParseOptions> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1227,6 +1251,8 @@ class _$MkParseOptionsCopyWithImpl<$Res, $Val extends MkParseOptions>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MkParseOptions
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1250,6 +1276,8 @@ class _$MkParseOptionsCopyWithImpl<$Res, $Val extends MkParseOptions>
     ) as $Val);
   }
 
+  /// Create a copy of MkParseOptions
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MkConstructsCopyWith<$Res> get constructs {
@@ -1284,6 +1312,8 @@ class __$$MkParseOptionsImplCopyWithImpl<$Res>
       _$MkParseOptionsImpl _value, $Res Function(_$MkParseOptionsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MkParseOptions
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1347,7 +1377,9 @@ class _$MkParseOptionsImpl implements _MkParseOptions {
   int get hashCode => Object.hash(runtimeType, constructs,
       gfmStrikethroughSingleTilde, mathTextSingleDollar);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MkParseOptions
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MkParseOptionsImplCopyWith<_$MkParseOptionsImpl> get copyWith =>
@@ -1367,8 +1399,11 @@ abstract class _MkParseOptions implements MkParseOptions {
   bool get gfmStrikethroughSingleTilde;
   @override
   bool get mathTextSingleDollar;
+
+  /// Create a copy of MkParseOptions
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MkParseOptionsImplCopyWith<_$MkParseOptionsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

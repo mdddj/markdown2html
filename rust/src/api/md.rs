@@ -6,6 +6,12 @@ pub async fn markdow2html(str: String) -> String {
     let html = markdown::to_html(&str);
     html
 }
+// markdown to html 同步
+#[frb(sync)]
+pub async fn markdow2html_sync(str: String) -> String {
+    let html = markdown::to_html(&str);
+    html
+}
 
 // markdown html for options
 pub async fn markdown2html_with_options(

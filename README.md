@@ -14,7 +14,7 @@ markdown2html: any
 
 ```dart
 void main(){
-  markdownInit();
+   markdownInit();
 }
 ```
 
@@ -28,6 +28,12 @@ void main(){
 import 'package:markdown2html/api/md.dart';
 
 String html = await markdow2Html(str: "## hello world");
+
+
+// or
+
+String html = markdow2HtmlSync(str:"## hello world");// sync
+
 ```
 
 output 
